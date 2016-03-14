@@ -1,0 +1,64 @@
+Tema 2 APD
+
+Nume: Dragu Cristian
+Grupa: 332CC
+
+Am rezolvat tema pornind de la scheletul de cod din laboratorul cu ReplicatedWorkers.
+Am folosit:
+- 2 workpool-uri: WorkPool_Map si WorkPool_Reduction (pentru traskurile de map, respectiv reduce).
+- 2 clase workeri: Worker (desemnata procesarii taskurilor Map) si WorkerRed (pentru taskuri de Reduction).
+- 2 partialSolution: PartialSolution (pt Map) si PartialSolutionReduction (pt Reduction).
+
+In main analizez fiecare fisier din input, rand pe rand. Dupa ce vad cate fragmente sunt intr-un fisier, 
+introduc task-urile in workpool si pun la treaba workerii de tip Worker. Fiecare worker in procesul de Map 
+verifica mai intai daca fragmentul incepe/se termina in mijlocul unui cuvant si daca da, atunci aplica o 
+parcurgere stanga/dreapta in functie de situatie, pana ajunge la un caracter separator.
+Dupa ce se identifica offsetul corespunzator fragmentului, se citesc respectivii octeti si se pun intr-un 
+string. 
+
+! Important ! Clasa PartialSolution are doua variabile statice de tip ArrayList in care se depun rezultatele 
+partiale ale fiecarui worker. Apoi, la procesele Reduce, se iau datele din aceste ArrayList-uri.
+
+Dupa ce toti workerii analizeaza fragmentele si salveaza cuvintele cele mai lungi din fiecare fragment si 
+creeaza hash-urile partiale, se creeaza task-urile de Reduce. Fiecare worker desemnat procesarii de taskuri 
+din workpool-ul de Reduce, ia cate un element din ArrayList-urile partiale ale PartialSolution si il analizeaza.
+Rezultatele finale se trec in hash si cuvinteMaximale.
+
+Dupa finalizarea taskurilor, in main se verifica lungimea sirului de cuvinteMaximale.
+
+DESCRIERE RULARE TEMA
+
+In arhiva se gasesc 2 directoare, fisierul build.xml si README-ul. Cele 2 directoare sunt src (contine sursele) 
+si classes (director in care se pun clasele rezultate in urma compilarii ... acest folder poate fi sters si 
+creat iar cu comanda ant clean)
+
+Comenzi ant:
+
+- ant clean -> sterge directorul classes si il recreeaza. Se vor pune clasele aici.
+- ant compile -> compileaza
+- ant jar
+
+Se va executa fisierul mapreduce.jar cu comanda: java -jar mapreduce.jar $Nr_Threads $Input_FILE $Output_FILE
+In acest mod am rulat tema pe propriul meu calculator.
+Pe fep, respectiv coada, am rulat cu comenzi de forma:
+- coada: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91.x86_64/bin/java -jar mapreduce.jar .....
+- fep: /usr/lib/jvm/java-1.7.0-openjdk.x86_64/bin/java -jar mapreduce.jar .....
+
+Timpii in urma rularii pe laptopul propriu (in milisecunde):
+
+Test1 1: 480
+Test1 2: 384
+Test1 4: 328
+
+Test2 1: 1431
+Test2 2: 762
+Test2 4: 572
+
+Test3 1: 699
+Test3 2: 496
+Test3 4: 399
+
+Test4 1: 3902
+Test4 2: 2108
+Test4 4: 1679
+

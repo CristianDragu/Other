@@ -1,0 +1,36 @@
+﻿Build started 1/12/2016 11:43:44 PM.
+     1>Project "D:\EGC\Tema 4\lab_EGC_9.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         copy "D:\EGC\Tema 4\dependente\freeglut\freeglut.dll" "D:\EGC\Tema 4\Debug"
+         copy "D:\EGC\Tema 4\dependente\glew\glew32.dll" "D:\EGC\Tema 4\Debug"
+         
+         :VCEnd
+                 1 file(s) copied.
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\egc\tema 4\main.cpp(215): warning C4018: '<': signed/unsigned mismatch
+     1>d:\egc\tema 4\main.cpp(347): warning C4018: '<': signed/unsigned mismatch
+     1>d:\egc\tema 4\main.cpp(348): warning C4305: '-=': truncation from 'double' to 'float'
+     1>d:\egc\tema 4\main.cpp(349): warning C4305: '-=': truncation from 'double' to 'float'
+     1>d:\egc\tema 4\main.cpp(350): warning C4305: '-=': truncation from 'double' to 'float'
+     1>d:\egc\tema 4\main.cpp(351): warning C4305: '-=': truncation from 'double' to 'float'
+     1>d:\egc\tema 4\main.cpp(473): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>d:\egc\tema 4\main.cpp(475): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+     1>d:\egc\tema 4\main.cpp(476): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>d:\egc\tema 4\main.cpp(476): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>d:\egc\tema 4\main.cpp(478): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>d:\egc\tema 4\main.cpp(478): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>d:\egc\tema 4\main.cpp(479): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>d:\egc\tema 4\main.cpp(479): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>d:\egc\tema 4\main.cpp(480): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>d:\egc\tema 4\main.cpp(480): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\lab_EGC_9.exe" /INCREMENTAL /NOLOGO /LIBPATH:dependente\freeglut /LIBPATH:dependente\glew opengl32.lib freeglut.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"Debug\lab_EGC_9.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\lab_EGC_9.lib" /MACHINE:X86 Debug\main.obj
+         lab_EGC_9.vcxproj -> D:\EGC\Tema 4\Debug\lab_EGC_9.exe
+     1>Done Building Project "D:\EGC\Tema 4\lab_EGC_9.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.34

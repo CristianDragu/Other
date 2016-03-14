@@ -1,0 +1,28 @@
+﻿Build started 11/25/2015 9:37:43 PM.
+     1>Project "D:\EGC\Tema 2\lab_EGC_5.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         copy "D:\EGC\Tema 2\dependente\freeglut\freeglut.dll" "D:\EGC\Tema 2\Debug"
+         copy "D:\EGC\Tema 2\dependente\glew\glew32.dll" "D:\EGC\Tema 2\Debug"
+         
+         :VCEnd
+                 1 file(s) copied.
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\egc\tema 2\main.cpp(148): warning C4018: '<': signed/unsigned mismatch
+     1>d:\egc\tema 2\main.cpp(162): warning C4018: '<': signed/unsigned mismatch
+     1>d:\egc\tema 2\main.cpp(202): warning C4305: '+=': truncation from 'double' to 'float'
+     1>d:\egc\tema 2\main.cpp(203): warning C4305: '-=': truncation from 'double' to 'float'
+     1>d:\egc\tema 2\main.cpp(280): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+     1>d:\egc\tema 2\main.cpp(527): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+     1>d:\egc\tema 2\main.cpp(532): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+     1>d:\egc\tema 2\main.cpp(571): warning C4018: '<': signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\lab_EGC_5.exe" /INCREMENTAL /NOLOGO /LIBPATH:dependente\freeglut /LIBPATH:dependente\glew opengl32.lib freeglut.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"Debug\lab_EGC_5.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\lab_EGC_5.lib" /MACHINE:X86 Debug\main.obj
+         lab_EGC_5.vcxproj -> D:\EGC\Tema 2\Debug\lab_EGC_5.exe
+     1>Done Building Project "D:\EGC\Tema 2\lab_EGC_5.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.19
