@@ -1,0 +1,26 @@
+Tema 2 ASC
+
+Nume: Dragu Cristian
+Grupa: 332 CC
+
+Am inceput implementarea temei lucrand in fisierul Fractal.c.
+Am observat, dupa folosirea utilitarului perf, ca functia iterate
+ruleaza cel mai mult timp si consuma cele mai multe resurse.
+Inmultirea celor doua numere complexe din scheletul de cod a fost
+ineficienta, asa ca folosind formulele de inmultire a doua numere
+complexe ((a,b) * (c,d) = (ac-bd, bc+ad)) am refacut inmultirea.
+De asemenea, toate variabilele declarate initial in for, le-am
+declarat in afara lui la, inceputul functiei. In loc de long
+double toate variabilele din Fractal sunt de tipul register
+double pentru a procesare mai rapida, din moment ce datele din
+functia iterate sunt folosite masiv. (compilatorul poate mari
+viteza de procesare).
+
+La fel ca in functia iterate, in functia Fractal_Render,
+variabilele sunt declarate la inceput si nu redeclarate la fiecare
+pas din for ca in schelet.
+
+Am refacut parcurgerile vectorilor, folosind pointeri ca in
+laborator.
+
+Am sters vectorul colors, care nu influenta codul si algoritmul.

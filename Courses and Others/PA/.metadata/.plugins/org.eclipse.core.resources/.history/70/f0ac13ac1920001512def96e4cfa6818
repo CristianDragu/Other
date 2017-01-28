@@ -1,0 +1,16 @@
+class test2 {
+
+	double x, y, r;
+	test2(){
+		System.out.println("asaaa");
+	}
+}
+
+class test1 extends test2 {
+	
+	public static void main(){
+		test2 test = new test2();
+		System.out.println("dasda");
+	}
+	
+}

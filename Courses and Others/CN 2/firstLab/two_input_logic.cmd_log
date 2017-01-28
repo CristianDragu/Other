@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "T:/firstLab/two_input_logic.xst" -ofn "T:/firstLab/two_input_logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc3s400-ft256-4 two_input_logic.ngc two_input_logic.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o two_input_logic_map.ncd two_input_logic.ngd two_input_logic.pcf 
+par -w -intstyle ise -ol high -t 1 two_input_logic_map.ncd two_input_logic.ncd two_input_logic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml two_input_logic.twx two_input_logic.ncd -o two_input_logic.twr two_input_logic.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f two_input_logic.ut two_input_logic.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc3s400-ft256-4 two_input_logic.ngc two_input_logic.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o two_input_logic_map.ncd two_input_logic.ngd two_input_logic.pcf 
+par -w -intstyle ise -ol high -t 1 two_input_logic_map.ncd two_input_logic.ncd two_input_logic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml two_input_logic.twx two_input_logic.ncd -o two_input_logic.twr two_input_logic.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f two_input_logic.ut two_input_logic.ncd 

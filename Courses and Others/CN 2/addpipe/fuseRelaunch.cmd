@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/CN 2/addpipe/cmp_exp_isim_beh.exe" -prj "D:/CN 2/addpipe/cmp_exp_beh.prj" "work.cmp_exp" "work.glbl" 

@@ -1,0 +1,19 @@
+Tema 1 PA
+
+Nume: Dragu Cristian
+Grupa: 322 CC
+
+Problema 2 - Patrat
+
+Problema a fost rezolvata implementand un algoritm de tip Divide et Impera.
+Datele au fost citire cu un BufferedReader, si parsate, apoi puse in vectorul
+v. 
+Vectorul v a fost sortat cu ajutorul functiei sort din Collections. (n*logn).
+Apoi, am aplicat algoritmul de Divide et Impera, cu lower initial egal cu
+2 * v[0], respectiv upper egal cu 2 * v[n-1]. (suma minima si suma maxima).
+Ne oprim cu algoritmul cand lower = upper si afisam suma dorita. In rest,
+facem suma medie, si cautam cate sume sunt mai mici ca suma medie.
+In functie de numarul de sume mai mici, mergem in jumatatea din stanga sau 
+dreapta.
+
+Alte comentarii si date legate de implementare se gasesc in fisierul sursa.

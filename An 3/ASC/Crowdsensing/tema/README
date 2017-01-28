@@ -1,0 +1,28 @@
+Tema 1 ASC
+
+Nume: Dragu Cristian
+Grupa: 332 CC
+
+Pentru implementarea temei am creat o clasa pentru barierele reentrante (reusable).
+Am asigurat ca la fiecare ciclu while din metoda run a clasei DeviceThread, toate
+deviceurile ajung in acelasi punct la final de ciclu.
+Am adaugat de asemenea mai multe atribute pentru obiectele de tip Device: barrier,
+lock si hash_locatie, fiecare cu urmatoarele utilizari:
+- barrier (explicat mai sus)
+- lock -> asiguram accesul la scrierea rezultatului doar a unui thread la un anumit
+moment de timp intr-o anumita locatie
+- hash_locatie -> un dictionar ce contine cate un lock pentru fiecare location
+existent. Un singur thread are acces la o locatie la un moment de timp t
+Am paralelizat calcularea noilor date pentru locatii folosind clasa ScriptThread.
+Am creat cate un thread pentru fiecare pereche (script, location) din vectorul
+scripts.
+script_list -> lista in care adaug toate threadurile create anterior
+Folosind script_list, pornesc threadurile, apoi in urmatorul ciclu for le inchid.
+In ScriptThread, la rularea metodei run, fiecare thread incearca sa faca acquire
+pe lock-ul (hash_locatie) unei locatii (un singur thread acceseaza o locatie la
+un moment), iar dupa ce a obtinut accesul continua calculele pentru obitnerea
+rezultatului. De asemenea, la scrierea rezultatului final pentru o locatie, fiecare
+thread incearca obtinerea accesului la scriere facand acquire pe lock. Dupa scriere
+se elibereaza (release) accesul la locatia respectiva.
+
+Pentru alte detalii legate de implementare, cititi si comentariile din cod.

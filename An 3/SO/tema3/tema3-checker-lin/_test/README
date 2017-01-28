@@ -1,0 +1,49 @@
+Tema 3 SO
+
+Nume student: Dragu Cristian
+Grupa: 332 CC
+
+Am pornit implementarea temei folosind structura facuta de mine in
+fisierul helpers.h
+
+struct data_set{
+	vm_map_t *map;
+	int num_pages;
+	int num_frames;
+	struct page_table_entry *page_table;
+	struct frame *frames;
+	w_boolean_t ram_full;
+	int last_frame;
+};
+typedef struct data_set data_set;
+
+map este elemetul din structura vm_map_t primit ca parametru in vm_alloc.
+ram_full indica daca s-au folosit toate cele num_frames pagini fizice.
+last_frame = indica la ce pagina fizica am ajuns. Daca s-au folosit toate
+paginile fizice si ram_full e true atunci devine 0 si se va trece o pagina
+in swap.
+
+Folosesc un vector (data) alocat dinamic care retine toate datele necesare
+rezolvarii temei.
+
+In vm_alloc am folosit mkostemp pentru generarea fisierelor temporare.
+Am mapat num_pages pagini, iar apoi am umplut vectorul data cu tabelele
+de pagini, frames, si alte date utile.
+
+In vm_free caut in vectorul data, elementul a carui prima pagina din tabela
+de pagini are aceeasi adresa cu start. Daca o gasesc atunci mut toate
+elementele din dreapta cu o pozitie in stanga.
+
+Am implementat functiile:
+-to_swap si from_swap care remapeaza paginile peste pagini din swap,
+respectiv peste pagini din ram.
+-set_prot_read si set_prot_write care ofera protectia corespunzatoare
+paginii care a generat fault.
+-increase_last_frame - incrementeaza last_frame. Daca ajunge egal cu
+num_frames atunci devine 0 si trebuie sa se mute o pagina in swap,
+pentru a face loc altei pagini.
+-page_for_swap_index - returneaza index-ul paginii care este legata la
+un frame cu idnexul 0.
+
+Pentru mult mai multe detalii legate de implementare, rog a se citi
+comentariile din codul sursa (vmsim.c).

@@ -1,0 +1,3 @@
+NET in1 LOC="N15";
+NET in2 LOC="J16";
+NET out1 LOC="L14";

@@ -1,0 +1,58 @@
+Tema 2 PA
+
+Nume: Dragu Cristian
+Grupa: 322 CC
+
+Problema 1
+
+Pentru rezolvarea temei am folosit un algoritm backtracking. Am citit cu un 
+BufferedReader datele din fisierul de intrare. 
+Algoritmul de backtracking cauta toate posibilitatile de plasare a culorilor 
+si cand gaseste una cu costPartial mai mic decat costul total (costul celei 
+mai bune solutii pana la momentul respectiv) atunci memoreaza solutia si 
+updateaza costTotal. 
+Daca la un anumit pas in cautarea unei solutii, suma costPartial depaseste 
+costul minim (costTotal), atunci intrerupe crearea posibilitatilor pe acea 
+ramura si revine in recursivitate cu return. 
+Daca s-a umplut cu culori vectorul de noduri (p == n), atunci se memoreaza 
+solutia pentru ca va avea suma de costuri mai mica. 
+Altfel, se umple nodul curent cu valori (culori) si se reapeleaza 
+backtrackingul cu costul partial calculat.
+In problema am mai folosit o metoda de validare, memorare a solutiei curente, 
+si pentru calculul sumei de costuri pentru un nod curent.
+
+Mult mai multe detalii legate de implementare se gasesc in sursa.
+
+Problema 2
+
+Notatii:
+
+- listaAdiancenta = Vector cu listele de adiacenta a nodurilor
+- vizitari = Vector care contine numarul de muchii nefolosite ale
+unui nod
+- arce = Vector pentru arce
+- n = numar de noduri
+
+Implementare:
+
+Metoda principala care rezolva cerinta problemei este creazaArce.
+Se parcurge vectorul de vizitari, care contine pe pozitia i, 
+care reprezinta si id-ul (numarul) nodului i, numarul de muchii. 
+Se cauta nodul cu minim de muchii pentru a fi procesat.
+Se iau toti vecinii directi, din listaAdiacenta, ai acestui nod, 
+si in functie de paritatea numarului de muchii se fac doua tipuri 
+de operatii:
+
+1. daca suma numarului de muchii si numarului de arce, introduse in 
+vectorul arce pana in acest moment, este para atunci se introduc in 
+vectorul de arce noile arce ce incep cu nodul nostru minim si 
+fiecare vecin in parte, apoi se fac stergerile legaturilor dintre 
+cele 2 noduri din lista de adiacenta. Se decrementeaza si numarul 
+de muchii din vizitari, pe pozitiile vecinilor.
+
+2. daca suma este impara, atunci se fac aceleasi operatii ca la pasul 
+anterior pentru primii m - 1 vecini ai nodului, iar al n-lea vecin 
+care face ca numarul de muchii sa fie impar va fi introdus in arce 
+cu forma inversa (de la y la x).
+
+Alte informatii legate de implementare se gasesc in sursa.

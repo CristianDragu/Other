@@ -1,0 +1,22 @@
+class test2 {
+
+	double x, y, r;
+	test2(){
+		System.out.println("asaaa");
+	}
+}
+
+public class test1 extends test2 {
+	
+	public static void main(String[] args){
+		test1 test = new test1();
+		
+		Float f = new Float(0.9F);
+		Float g = new Float(0.9F);
+		Double d = new Double(0.9);
+		
+		if(f.equals(g))
+			System.out.println("da");
+	}
+	
+}
