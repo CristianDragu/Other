@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>My app</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><p class="text-primary">My APP</p></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Smart Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="index.html">Energy Plan</a></li>
+                    <li><a href="preview.html">House Preview</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-9 col-md-10 main">
+                <h2 class="page-header">Weather in your area</h2>
+                <div class="col-sm-12 col-md-12">
+                    <div class="col-sm-4 col-md-4">
+                        <div class="row">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title" id="weather-panel-title">Connecting...</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Humidity</td>
+                                                    <td id="humidity"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Temperature</td>
+                                                    <td id="temperature"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Info</td>
+                                                    <td id="info"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="sub-header">
+                                <div class="col-md-5 col-sm-5">
+                                    <p>Not your location? <a href="#" name="current" style="font-size: 12px;">Get current location</a></p>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="input-group input-group-sm">
+                                    <input name="city" type="text" class="form-control" placeholder="City" aria-describedby="sizing-addon3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-8">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" id="house-panel-title">Rooms Manager</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <td>Room</td>
+                                            <td>Lights</td>
+                                            <td>Windows</td>
+                                            <td>Temperature (℃)</td>
+                                            <td>Actions</td>
+                                        </thead>
+                                        <tbody id="house-table-body"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 map"> <!-- map window -->
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqWEZafsrcenAcn5Lmv4c9dfoRpX5BjUg&callback=initMap" async defer></script>
+  </body>
+
+</html>

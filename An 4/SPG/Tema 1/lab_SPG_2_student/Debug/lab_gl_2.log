@@ -1,0 +1,12 @@
+﻿          1 file(s) copied.
+          1 file(s) copied.
+  main.cpp
+e:\spg\lab 2\lab_spg_2_student\main.cpp(127): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+e:\spg\lab 2\lab_spg_2_student\main.cpp(244): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\spg\lab 2\lab_spg_2_student\main.cpp(245): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\spg\lab 2\lab_spg_2_student\main.cpp(254): warning C4018: '<': signed/unsigned mismatch
+e:\spg\lab 2\lab_spg_2_student\main.cpp(255): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\spg\lab 2\lab_spg_2_student\main.cpp(255): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\spg\lab 2\lab_spg_2_student\main.cpp(268): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  lab_gl_2.vcxproj -> E:\SPG\Lab 2\lab_SPG_2_student\Debug\lab_gl_2.exe
+  lab_gl_2.vcxproj -> Debug\lab_gl_2.pdb (Full PDB)

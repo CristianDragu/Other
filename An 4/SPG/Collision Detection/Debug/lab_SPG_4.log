@@ -1,0 +1,8 @@
+﻿          1 file(s) copied.
+          1 file(s) copied.
+  main.cpp
+e:\spg\proiect\main.cpp(419): warning C4018: '<': signed/unsigned mismatch
+e:\spg\proiect\main.cpp(420): warning C4018: '<': signed/unsigned mismatch
+e:\spg\proiect\main.cpp(421): warning C4018: '<': signed/unsigned mismatch
+  lab_SPG_4.vcxproj -> E:\SPG\proiect\Debug\lab_SPG_4.exe
+  lab_SPG_4.vcxproj -> Debug\lab_SPG_4.pdb (Full PDB)

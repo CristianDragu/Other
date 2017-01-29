@@ -1,0 +1,42 @@
+.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+
+.sidebar {
+	border-right: 1px solid #eee;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #f5f5f5;
+	height:100vh;
+}
+
+.page-header {
+	margin-top: 0px;
+}
+
+.sub-header {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+
+.map {
+	padding-bottom: 20px;
+	margin-top: 20px;
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+
+#map {
+	height: 500px;
+	width: 100%;
+}
+
+.blue {
+	color: blue;
+}
+
+.grey {
+	color: grey;
+}

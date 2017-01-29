@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>My app</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><p class="text-primary">Buy.me</p></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#" id="cos">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid" id="lista-ziare">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td><h4>Magazine</h4></td>
+                        <td><h4>CD</h4></td>
+                        <td style="width: 200px;"><h4>Price (RON)</h4></td>
+                    </tr>
+                </thead>
+                <tbody id="body-lista-ziare"></tbody>
+            </table>
+        </div>
+        <nav>
+          <ul class="pager">
+            <li class="previous" id="left-arrow"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
+            <li class="next" id="right-arrow"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+          </ul>
+        </nav>
+    </div>
+
+    <div class="container-fluid" id="arata-cos">
+        <h2 class="page-header">Shopping cart</h2>
+        <div class="col-md-10 col-sm-10">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td><h4>Magazine</h4></td>
+                            <td><h4>CD</h4></td>
+                            <td style="width: 200px;"><h4>Price (RON)</h4></td>
+                        </tr>
+                    </thead>
+                    <tbody id="body-arata-cos"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2">
+            <div align="center" class="total">
+                <div id="suma"></div>
+                <a href="index.html">
+                    <button action="index.html" class="btn btn-primary" id="submit">Checkout</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+
+</html>
